@@ -3,17 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>(function(){var q=new URLSearchParams(location.search).get('theme'),m=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)'),d=document.documentElement;function a(){d.setAttribute('data-theme',q==='light'||q==='dark'?q:(m&&m.matches?'dark':'light'))}a();if(m&&m.addEventListener&&!q)m.addEventListener('change',a)})();</script>
 <title>White Thanksgiving odds 2026 | RotoGrinders</title>
 <style>
-:root{
+:root,html[data-theme=light]{
   /* Brand tokens: swap these for the official RotoGrinders palette */
   --ink:#0F1D33; --paper:#FFFFFF; --mist:#F1F5FA; --line:#D5DFEB; --muted:#5B6B82; --accent:#FF5A1F;
-  --land:#E7ECF2; --border:#FFFFFF; --halo:#FFFFFF;
+  --land:#E7ECF2; --border:#FFFFFF; --halo:#FFFFFF; --bst:rgba(15,29,51,.55); --lgb:rgba(15,29,51,.35);
   --b0:#DCEAF7; --b1:#B5D3EE; --b2:#7FAEDD; --b3:#3F7FC4; --b4:#1B4F9C; --b5:#0A2C66;
+  --t0:#0F1D33; --t1:#0F1D33; --t2:#0F1D33; --t3:#fff; --t4:#fff; --t5:#fff; --bar:#1F5AA8;
   --font:Inter,"Helvetica Neue",Arial,system-ui,sans-serif;
 }
-@media (prefers-color-scheme:dark){
-  :root{--paper:#0F1D33;--mist:#172A47;--line:#2D4263;--ink:#EEF3FA;--muted:#9FB0C9;--land:#1D3150;--border:#0F1D33;--halo:#0F1D33}
+html[data-theme=dark]{
+  --ink:#EEF3FA; --paper:#0F1D33; --mist:#172A47; --line:#2D4263; --muted:#A9B9D0;
+  --land:#223A5E; --border:#0F1D33; --halo:#0F1D33; --bst:rgba(255,255,255,.55); --lgb:rgba(255,255,255,.45);
+  --b0:#4A6F9C; --b1:#6C95C6; --b2:#8DB7E6; --b3:#ADD1F7; --b4:#D3E8FF; --b5:#FFFFFF;
+  --t0:#fff; --t1:#0F1D33; --t2:#0F1D33; --t3:#0F1D33; --t4:#0F1D33; --t5:#0F1D33; --bar:#8DB7E6;
 }
 *{box-sizing:border-box}
 html,body{margin:0}
@@ -39,7 +44,7 @@ svg{display:block;width:100%;height:auto}
 .mode-states .st.has{cursor:pointer}
 .mode-states .st.has:hover{stroke:var(--accent);stroke-width:2}
 .st.sel{stroke:var(--accent);stroke-width:2.4}
-.bub{stroke:rgba(15,29,51,.55);stroke-width:.8;cursor:pointer;fill-opacity:.9}
+.bub{stroke:var(--bst);stroke-width:.8;cursor:pointer;fill-opacity:.9}
 .bub:hover{stroke:var(--ink);stroke-width:1.6}
 .bub:focus-visible{outline:none;stroke:var(--accent);stroke-width:3}
 .bub.sel{stroke:var(--accent);stroke-width:3}
@@ -52,7 +57,7 @@ svg{display:block;width:100%;height:auto}
 .tip b{font-weight:700}
 .legend{display:flex;flex-wrap:wrap;gap:6px 14px;margin:10px 2px 0;font-size:12.5px;color:var(--muted)}
 .legend span{display:inline-flex;align-items:center;gap:6px}
-.legend em{width:14px;height:14px;border-radius:50%;display:inline-block;border:1px solid rgba(15,29,51,.35)}
+.legend em{width:14px;height:14px;border-radius:50%;display:inline-block;border:1px solid var(--lgb)}
 .panel{background:var(--mist);border:1px solid var(--line);border-radius:8px;padding:16px;min-height:300px}
 .panel h2{margin:0;font-size:22px;letter-spacing:-.01em}
 .panel h3{margin:0 0 8px;font-size:15px}
@@ -69,7 +74,7 @@ td button{font:inherit;font-weight:600;color:var(--ink);background:none;border:0
 td button:hover{text-decoration:underline}
 td button:focus-visible{outline:2px solid var(--accent)}
 .bar{height:6px;border-radius:3px;background:var(--line);margin-top:4px;overflow:hidden}
-.bar u{display:block;height:100%;background:var(--b4);text-decoration:none}
+.bar u{display:block;height:100%;background:var(--bar);text-decoration:none}
 .kv{display:grid;grid-template-columns:1fr auto;gap:6px 14px;font-size:14px;margin:12px 0 0}
 .kv dt{color:var(--muted)}.kv dd{white-space:nowrap;margin:0;text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
 .back{font:inherit;font-size:13px;color:var(--muted);background:none;border:0;padding:0;margin:0 0 8px;cursor:pointer;text-decoration:underline}
@@ -80,12 +85,12 @@ td button:focus-visible{outline:2px solid var(--accent)}
 .t b{font-size:clamp(11px,1.9vw,15px);font-weight:800}.t i{font-style:normal;font-size:clamp(8px,1.3vw,11px);font-weight:600}
 .t:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 .t[aria-pressed=true]{outline:3px solid var(--accent);outline-offset:1px}
-.c0{background:var(--b0);color:#0F1D33}.c1{background:var(--b1);color:#0F1D33}.c2{background:var(--b2);color:#0F1D33}
-.c3{background:var(--b3);color:#fff}.c4{background:var(--b4);color:#fff}.c5{background:var(--b5);color:#fff}
+.c0{background:var(--b0);color:var(--t0)}.c1{background:var(--b1);color:var(--t1)}.c2{background:var(--b2);color:var(--t2)}
+.c3{background:var(--b3);color:var(--t3)}.c4{background:var(--b4);color:var(--t4)}.c5{background:var(--b5);color:var(--t5)}
 .f0{fill:var(--b0)}.f1{fill:var(--b1)}.f2{fill:var(--b2)}.f3{fill:var(--b3)}.f4{fill:var(--b4)}.f5{fill:var(--b5)}
 .mode-states .sf0{fill:var(--b0)}.mode-states .sf1{fill:var(--b1)}.mode-states .sf2{fill:var(--b2)}.mode-states .sf3{fill:var(--b3)}.mode-states .sf4{fill:var(--b4)}.mode-states .sf5{fill:var(--b5)}
 @media (max-width:640px){.lbl,.lead,.slbl{display:none}}
-.slbl.dark{fill:#0F1D33}.slbl.light{fill:#fff}
+.slbl{fill:var(--t0)}
 </style>
 </head>
 <body>
@@ -204,7 +209,7 @@ function buildGeo(states){
       p.addEventListener('pointermove',e=>{if(mode==='states')showTip(e,'<b>'+s.state+'</b> '+s.pct+'% &middot; '+s.odds)});
       p.addEventListener('pointerleave',hideTip);
       const c=centroid(st.polys);
-      if(c&&c.area>900){const b=bin(s.p);const t=el('text',{x:c.x.toFixed(1),y:(c.y+4).toFixed(1),class:'slbl '+(b>=3?'light':'dark')},gSL);t.textContent=s.ab+' '+(s.p<.01?'<1':s.pct.replace(/\.0$/,''))+'%'}}
+      if(c&&c.area>900){const b=bin(s.p);const t=el('text',{x:c.x.toFixed(1),y:(c.y+4).toFixed(1),class:'slbl',style:'fill:var(--t'+b+')'},gSL);t.textContent=s.ab+' '+(s.p<.01?'<1':s.pct.replace(/\.0$/,''))+'%'}}
   });
   [...CITIES].sort((a,b)=>b.p-a.p).forEach(c=>{
     const k=c.city+'|'+c.ab;
